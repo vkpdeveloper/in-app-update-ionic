@@ -1,0 +1,36 @@
+{
+  "name": "com.vkpdeveloper.inappupdate",
+  "displayName": "InAppUpdatePlugin",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "in_app_update",
+    "ionic",
+    "cordova",
+    "google_play"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkpdeveloper/in-app-update-ionic.git"
+  },
+  "author": "Vaibhav Pathak",
+  "license": "MIT",
+  "devDependencies": {
+    "cordova-android": "^10.0.1",
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  
+  "cordova": {
+    "id": "cordova-plugin-in-app-update",
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

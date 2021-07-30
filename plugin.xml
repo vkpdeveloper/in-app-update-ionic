@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-toastyplugin" version="0.0.1">
+    <name>InAppUpdate</name>
+
+    <description>An Android Cordova plugin that allows developer to directly communicate to google play apis and update the ionic apps.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,ionic,google-play,in-app-update</keywords>
+    <repo>https://github.com/vkpdeveloper/in-app-update-ionic.git</repo>
+    <issue>https://github.com/vkpdeveloper/in-app-update-ionic/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/inappupdate.js" name="inAppUpdate">
+        <clobbers target="window.plugins.inAppUpdate" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="InAppUpdate">
+                <param name="android-package" value="com.vkpdeveloper.cordova.plugin.InAppUpdate"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/InAppUpdate.java" target-dir="src/com/vkpdeveloper/cordova/plugin" />
+    </platform>
+</plugin>
